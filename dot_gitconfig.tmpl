@@ -1,3 +1,11 @@
+; Machine-specific things
+{{- if (hasKey . "gpgkey") }}
+[user]
+	signingKey = {{ .gpgkey }}
+[commit]
+	gpgSign = true
+{{- end }}
+; End of machine-specific things
 [user]
 	email = {{ .email | quote }}
 	name = Pavel Lutskov
@@ -10,10 +18,5 @@
 	defaultBranch = master
 [push]
 	default = current
-; Machine-specific things
-{{- if (hasKey . "gpgkey") }}
-[user]
-	signingKey = {{ .gpgkey }}
-[commit]
-	gpgSign = true
-{{- end }}
+[merge]
+	conflictStyle = diff3
