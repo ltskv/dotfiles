@@ -1,0 +1,19 @@
+[user]
+	email = {{ .email | quote }}
+	name = Pavel Lutskov
+[alias]
+	gl = log --oneline --decorate --graph --all
+	co = checkout
+[pull]
+	ff = only
+[init]
+	defaultBranch = master
+[push]
+	default = current
+; Machine-specific things
+{{- if (hasKey . "gpgkey") }}
+[user]
+	signingKey = {{ .gpgkey }}
+[commit]
+	gpgSign = true
+{{- end }}
