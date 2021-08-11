@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+crt_bashrc="$(cat)"
+printf "%s\n" "$(echo "$crt_bashrc" | grep -v '.bash_config')"
+
+echo ""
+# shellcheck disable=SC2016
+echo 'if [ -f "$HOME/.bash_config" ]; then source "$HOME/.bash_config"; fi'
