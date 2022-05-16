@@ -12,9 +12,10 @@
 	email = {{ .email | quote }}
 	name = Pavel Lutskov
 [alias]
-	gl = log --oneline --decorate --graph --all
-	co = checkout
 	glb = log --oneline --decorate --graph
+	gl = glb --all
+	glbm = glb master HEAD
+	co = checkout
 	fm = fetch origin master:master
 [pull]
 	ff = only
