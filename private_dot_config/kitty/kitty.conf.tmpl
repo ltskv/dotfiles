@@ -1,8 +1,8 @@
 scrollback_lines 100000
 confirm_os_window_close 1
 
-font_family JetBrains Mono
-font_size 10.5
+font_family {{ or (get . "termfont") "Monospace" }}
+font_size {{ or (get . "termfontsize") 12.0 }}
 
 cursor #c0c0c0
 cursor_shape block
