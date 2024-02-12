@@ -4,6 +4,7 @@ alias ls='ls --color=auto'
 export HISTSIZE=-1
 export HISTFILESIZE=-1
 export NNN_OPTS=A
+export HISTCONTROL=ignoreboth:erasedups
 
 function kssh() {
     kitty +kitten ssh "$@"
