@@ -1,7 +1,7 @@
 # -*- conf -*-
 
 term={{ (or (get . "foot_termvar") "xterm-256color") }}
-font=JetBrains Mono:size={{ (or (get . "termfontsize") 10) }}
+font={{ (or (get . "termfont") "Monospace") }}:size={{ (or (get . "termfontsize") 10) }}
 
 [scrollback]
 lines=100000
