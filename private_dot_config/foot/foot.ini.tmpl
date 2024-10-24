@@ -1,0 +1,37 @@
+# -*- conf -*-
+
+term={{ (or (get . "foot_termvar") "xterm-256color") }}
+font=JetBrains Mono:size={{ (or (get . "termfontsize") 10) }}
+
+[scrollback]
+lines=100000
+multiplier=15.0
+
+[cursor]
+color=111111 c0c0c0
+
+[colors]
+background=ffffff
+foreground=111111
+
+## Normal/regular colors (color palette 0-7)
+regular0=000000  # black
+regular1=c00000  # red
+regular2=00c000  # green
+regular3=c0c000  # yellow
+regular4=5f00d7  # blue
+regular5=c000c0  # magenta
+regular6=00c0c0  # cyan
+regular7=c0c0c0  # white
+
+## Bright colors (color palette 8-15)
+bright0=808080   # bright black
+bright1=ff0000   # bright red
+bright2=00ff00   # bright green
+bright3=ffff00   # bright yellow
+bright4=5f00ff   # bright blue
+bright5=ff00ff   # bright magenta
+bright6=00ffff   # bright cyan
+bright7=ffffff   # bright white
+
+# vim: ft=dosini
