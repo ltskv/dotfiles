@@ -5,6 +5,7 @@ export HISTSIZE=-1
 export HISTFILESIZE=-1
 export NNN_OPTS=A
 export HISTCONTROL=ignoreboth:erasedups
+export LESS='-R'
 
 function kssh() {
     kitty +kitten ssh "$@"
