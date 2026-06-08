@@ -2,5 +2,6 @@
 target-version = "py310"
 
 [tool.ruff.lint]
-select = ["F", "B", "I"]
+select = ["E", "F", "B", "I"]
+ignore = ["E501"]
 fixable = ["I"]
