@@ -5,7 +5,7 @@ export HISTSIZE=-1
 export HISTFILESIZE=-1
 export NNN_OPTS=A
 export HISTCONTROL=ignoreboth:erasedups
-export LESS='-R'
+export LESS='-R -F'
 
 # Run fzf shell integration if fzf is installed
 if command -v fzf >/dev/null 2>&1
