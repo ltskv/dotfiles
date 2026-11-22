@@ -1,0 +1,44 @@
+term = xterm-ghostty
+{{- if (hasKey . "ghosttytermfont") }}
+font-family =
+font-family = "{{ .ghosttytermfont }}"
+{{- end }}
+font-size = {{ (or (get . "termfontsize") 10) }}
+font-feature = +zero
+
+scrollback-limit-lines = 100000
+scrollback-limit-bytes = unlimited
+confirm-close-surface = always
+
+cursor-color = #c0c0c0
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
+foreground = #111111
+background = #ffffff
+selection-foreground = cell-background
+selection-background = cell-foreground
+palette = 0=#000000
+palette = 1=#c00000
+palette = 2=#00c000
+palette = 3=#c0c000
+palette = 4=#5f00d7
+palette = 5=#c000c0
+palette = 6=#00c0c0
+palette = 8=#808080
+palette = 9=#ff0000
+palette = 10=#00ff00
+palette = 11=#ffff00
+palette = 12=#5f00ff
+palette = 13=#ff00ff
+palette = 14=#00ffff
+
+bell-features = no-system,no-audio
+link-url = true
+
+gtk-titlebar-style = tabs
+gtk-wide-tabs = false
+keybind = ctrl+shift+.=move_tab:1
+keybind = ctrl+shift+,=move_tab:-1
+keybind = ctrl+shift+r=reload_config
